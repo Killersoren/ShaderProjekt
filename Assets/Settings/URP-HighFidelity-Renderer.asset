@@ -40,8 +40,9 @@ MonoBehaviour:
       type: 3}
   m_RendererFeatures:
   - {fileID: -1878332245247344467}
-  - {fileID: 1630459043061764574}
-  m_RendererFeatureMap: adc0de57c6d2eee5de118572dc8da016
+  - {fileID: 3460603125435999800}
+  - {fileID: 8009064236787804037}
+  m_RendererFeatureMap: adc0de57c6d2eee5382638203588063085a705517de9256f
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -99,3 +100,54 @@ MonoBehaviour:
     IsEnabled: 0
     WhenToInsert: 550
     MaterialToBlit: {fileID: 2100000, guid: d4bf0d39a4ef5e046943392c5ca10c57, type: 2}
+--- !u!114 &3460603125435999800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8360c8ee88aac39458cbe1b2be10911f, type: 3}
+  m_Name: MyBlitFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    IsEnabled: 0
+    WhenToInsert: 550
+    MaterialToBlit: {fileID: 2100000, guid: d4bf0d39a4ef5e046943392c5ca10c57, type: 2}
+--- !u!114 &4524966008095162156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccff69db7fe071e40844e946d2b07086, type: 3}
+  m_Name: GreyscaleFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  Settings:
+    IsEnabled: 0
+    WhenToInsert: 550
+    GreyscaleMaterial: {fileID: 2100000, guid: b98378907b8639a44a365744fd819c86, type: 2}
+--- !u!114 &8009064236787804037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7618a4a8b8cdf0b4da57125745263e03, type: 3}
+  m_Name: ChromaticAberrationFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    IsEnabled: 1
+    WhenToInsert: 550
+    MaterialToBlit: {fileID: 2100000, guid: d7cd783d94b4427479fb7f874faac020, type: 2}
