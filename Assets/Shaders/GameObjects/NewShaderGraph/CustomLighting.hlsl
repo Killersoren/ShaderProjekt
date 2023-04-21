@@ -21,6 +21,8 @@ struct CustomLightingData
     // surface attribute
     float3 albedo;
     float smoothness;
+    float metallic;
+    float3 emission;
 };
 
 // Translate a [0, 1] smoothness value to an exponent 
@@ -34,12 +36,16 @@ float3 CustomLightHandling(CustomLightingData d, Light light)
 {
     float3 radiance = light.color * (light.distanceAttenuation * light.shadowAttenuation);
 
+    float3 reflected = reflect(-light.direction, d.normalWS);
+
     float diffuse = saturate(dot(d.normalWS, light.direction));
 
-    float specularDot = saturate(dot(d.normalWS, normalize(light.direction + d.viewDirectionWS)));
+    //float specularDot = saturate(dot(d.normalWS, normalize(light.direction + d.viewDirectionWS)));
+    float specularDot = saturate(dot(reflected, d.viewDirectionWS));
     float specular = pow(specularDot, GetSmoothnessPower(d.smoothness)) * diffuse;
 
-    float3 color = d.albedo * radiance * (diffuse + specular);
+    float3 color = d.albedo * radiance * (diffuse + specular * (1.0 - d.metallic));
+    color += d.emission * radiance * d.metallic * saturate(dot(reflected, d.viewDirectionWS));
 
     return color;
 }
@@ -80,7 +86,7 @@ float3 CalculateCustomLighting(CustomLightingData d)
 }
 
 // custom wrapper function
-void CalculateCustomLighting_float(float3 Position, float3 Normal, float3 ViewDirection, float3 Albedo, float Smoothness, out float3 Color)
+void CalculateCustomLighting_float(float3 Position, float3 Normal, float3 ViewDirection, float3 Albedo, float Smoothness, float Metallic, float3 Emission, out float3 Color)
 {
     CustomLightingData d;
     d.positionWS = Position;
@@ -88,6 +94,8 @@ void CalculateCustomLighting_float(float3 Position, float3 Normal, float3 ViewDi
     d.viewDirectionWS = ViewDirection;
     d.albedo = Albedo;
     d.smoothness = Smoothness;
+    d.metallic = Metallic;
+    d.emission = Emission;
 
     #ifdef SHADERGRAPH_PREVIEW
         // In preview there're no shadows or bakedGI
