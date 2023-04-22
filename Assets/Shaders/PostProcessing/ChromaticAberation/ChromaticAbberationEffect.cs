@@ -21,22 +21,22 @@ public class ChromaticAbberationEffect : MonoBehaviour
 		Graphics.Blit(source, destination, _material);
 	}
 
-	public void LateUpdate()
-	{
-		if (_material != null)
-			{
-			//_material.SetFloat(_distanceId, _distance);
-			//_distance = Mathf.PingPong(Time.time, 0.05f);
+	// public void LateUpdate()
+	// {
+	// 	if (_material != null)
+	// 		{
+	// 		//_material.SetFloat(_distanceId, _distance);
+	// 		//_distance = Mathf.PingPong(Time.time, 0.05f);
 
 
-			    // Update the value of the _distance variable
-    		_distance = Mathf.Sin(Time.time);
+	// 		    // Update the value of the _distance variable
+    // 		_distance = Mathf.Sin(Time.time);
 
-    		// Update the material with the new value of the _distance variable
-			_material.SetFloat(_distanceId, _distance);
-			Debug.Log("Resy");
-			}
-	}
+    // 		// Update the material with the new value of the _distance variable
+	// 		_material.SetFloat(_distanceId, _distance);
+	// 		Debug.Log("Resy");
+	// 		}
+	// }
 
 	// public void Update()
 	// {
