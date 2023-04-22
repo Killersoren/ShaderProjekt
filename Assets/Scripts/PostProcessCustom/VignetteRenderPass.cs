@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-class MyBlitRenderPass : ScriptableRenderPass
+public class VignetteRenderPass : ScriptableRenderPass
 {
   // used to label this pass in Unity's Frame Debug utility
   string profilerTag;
@@ -11,7 +11,7 @@ class MyBlitRenderPass : ScriptableRenderPass
   RenderTargetIdentifier cameraColorTargetIdent;
   RenderTargetHandle tempTexture;
 
-  public MyBlitRenderPass(string profilerTag,
+  public VignetteRenderPass(string profilerTag,
     RenderPassEvent renderPassEvent, Material materialToBlit)
   {
     this.profilerTag = profilerTag;

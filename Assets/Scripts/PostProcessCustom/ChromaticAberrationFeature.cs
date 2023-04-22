@@ -25,9 +25,6 @@ public class ChromaticAberrationFeature : ScriptableRendererFeature
       settings.WhenToInsert,
       settings.MaterialToBlit
     );
-
-   // ScriptInstance = GameObject.Find("PlayerCamera").GameObject.GetComponent<ScriptInstance>();
-     // ScriptInstance = PlayerCamera.GetComponent<ScriptInstance>();
   }
   
   // called every frame once per camera

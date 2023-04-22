@@ -40,9 +40,9 @@ MonoBehaviour:
       type: 3}
   m_RendererFeatures:
   - {fileID: -1878332245247344467}
-  - {fileID: 3460603125435999800}
   - {fileID: 8009064236787804037}
-  m_RendererFeatureMap: adc0de57c6d2eee5382638203588063085a705517de9256f
+  - {fileID: 1835207440074449268}
+  m_RendererFeatureMap: adc0de57c6d2eee585a705517de9256f74a1ca8271f77719
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -100,6 +100,23 @@ MonoBehaviour:
     IsEnabled: 0
     WhenToInsert: 550
     MaterialToBlit: {fileID: 2100000, guid: d4bf0d39a4ef5e046943392c5ca10c57, type: 2}
+--- !u!114 &1835207440074449268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82c9f60c4414b34dae445bbe561ff0a, type: 3}
+  m_Name: VignetteFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    IsEnabled: 1
+    WhenToInsert: 550
+    MaterialToBlit: {fileID: 2100000, guid: bacdd2a0563a6e243b2a631728004655, type: 2}
 --- !u!114 &3460603125435999800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,5 +166,5 @@ MonoBehaviour:
   m_Active: 1
   settings:
     IsEnabled: 1
-    WhenToInsert: 600
+    WhenToInsert: 550
     MaterialToBlit: {fileID: 2100000, guid: 697420b13171b6741a4daa81890978e1, type: 2}
