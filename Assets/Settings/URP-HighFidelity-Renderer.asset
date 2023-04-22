@@ -149,5 +149,5 @@ MonoBehaviour:
   m_Active: 1
   settings:
     IsEnabled: 1
-    WhenToInsert: 550
+    WhenToInsert: 600
     MaterialToBlit: {fileID: 2100000, guid: 697420b13171b6741a4daa81890978e1, type: 2}
