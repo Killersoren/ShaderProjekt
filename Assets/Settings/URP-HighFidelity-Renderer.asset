@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7618a4a8b8cdf0b4da57125745263e03, type: 3}
   m_Name: ChromaticAberrationFeature
   m_EditorClassIdentifier: 
-  m_Active: 0
+  m_Active: 1
   settings:
     IsEnabled: 1
     WhenToInsert: 550
