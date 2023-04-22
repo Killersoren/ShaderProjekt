@@ -10,6 +10,7 @@ public class ChromaticAberrationFeature : ScriptableRendererFeature
     public bool IsEnabled = true;
     public RenderPassEvent WhenToInsert = RenderPassEvent.AfterRendering;
     public Material MaterialToBlit;
+  //  public MonoBehaviour ScriptInstance;
   }
 
   // MUST be named "settings" (lowercase) to be shown in the Render Features inspector
@@ -35,6 +36,17 @@ public class ChromaticAberrationFeature : ScriptableRendererFeature
       // we can do nothing this frame if we want
       return;
     }
+
+    // ChromaticAbberationEffect chromaticAbberationEffect = settings.ScriptInstance;
+    //    if (chromaticAbberationEffect != null)
+    // {
+    //     chromaticAbberationEffect.TestMethod();
+    // }
+
+    // [SerializeField]
+    // ChromaticAbberationEffect script = settings.MyScriptInstance as ChromaticAbberationEffect;
+
+    // script.TestMethod();
     
     // Gather up and pass any extra information our pass will need.
     // In this case we're getting the camera's color buffer target
