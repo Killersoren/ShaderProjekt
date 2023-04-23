@@ -47,18 +47,9 @@ Shader "Hidden/ChromaticAbberation"
             float _GreenOffset;
             float _BlueOffset;
 
-			//Modify the fragment function to apply a Chromatic Abberation effect.
-			//See the reference image in the exercise folder.
-            //sample using different values for r g and b
-			//Use the "_Distance" variable to control the size of the effect.
-			//Bonus points for enhancing the effect, for pixels further from the center of the screen.
 
             fixed4 frag (v2f i) : SV_Target
             {
-                // float4 col = tex2D(_MainTex,i.uv);         
-				// return col;
-
-                    // Get the texture color at the current pixel
                 float4 col = tex2D(_MainTex, i.uv);
 
                 float redOffset = _RedOffset * _Distance * i.uv.x;
