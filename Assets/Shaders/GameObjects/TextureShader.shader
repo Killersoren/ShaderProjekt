@@ -114,7 +114,7 @@ Shader "Unlit/TextureShader"
 
         Pass
         {
-            Tags { "LightMode"="ForwardAdd" } // other lights, one running once per light
+            Tags { "LigthMode"="ForwardAdd" } // other lights, one running once per light
             Blend One One // additive blending
             CGPROGRAM
             #pragma vertex vert
@@ -198,7 +198,7 @@ Shader "Unlit/TextureShader"
         }
         Pass
         {
-            Tags { "LightMode"="ShadowCaster" }
+            Tags { "LigthMode"="ShadowCaster" }
 
             CGPROGRAM
             #pragma target 3.0
