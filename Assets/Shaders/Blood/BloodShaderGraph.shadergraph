@@ -1343,10 +1343,10 @@
     "m_Guid": {
         "m_GuidSerialized": "684f5f7e-6b98-4a22-9ba5-5035e76b427b"
     },
-    "m_Name": "DeepWaterColor",
+    "m_Name": "DeepBloodColor",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "DeepWaterColor",
-    "m_DefaultReferenceName": "_DeepWaterColor",
+    "m_RefNameGeneratedByDisplayName": "DeepBloodColor",
+    "m_DefaultReferenceName": "_DeepBloodColor",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -2072,7 +2072,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "4715e4cd73ce411abd5589d086a73d20",
     "m_Id": 0,
-    "m_DisplayName": "ShallowWaterColor",
+    "m_DisplayName": "ShallowBloodColor",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -2460,10 +2460,10 @@
     "m_Guid": {
         "m_GuidSerialized": "3ca68461-634f-4d5b-9e91-ed22ef6c5550"
     },
-    "m_Name": "ShallowWaterColor",
+    "m_Name": "ShallowBloodColor",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "ShallowWaterColor",
-    "m_DefaultReferenceName": "_ShallowWaterColor",
+    "m_RefNameGeneratedByDisplayName": "ShallowBloodColor",
+    "m_DefaultReferenceName": "_ShallowBloodColor",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -3708,7 +3708,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "9ed12bf0102b428b8ae33bd3ffec8e22",
     "m_Id": 0,
-    "m_DisplayName": "DeepWaterColor",
+    "m_DisplayName": "DeepBloodColor",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -4769,10 +4769,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 1255.9998779296875,
-            "y": 172.0,
+            "x": 1245.5999755859375,
+            "y": 91.19999694824219,
             "width": 119.199951171875,
-            "height": 148.79995727539063
+            "height": 148.79998779296876
         }
     },
     "m_Slots": [

@@ -28,9 +28,7 @@ Shader "Unlit/BloodTest"
             float4 _MainTex_ST;
             float4 _Tint;
             float _Speed;
-     
-             // Add this line to enable texture wrapping
-           // sampler2D_wrapmode _MainTex_WRAP { AddressU = Repeat; AddressV = Repeat; };
+    
      
             v2f vert (appdata v) {
                 v2f o;
