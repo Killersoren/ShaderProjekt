@@ -61,17 +61,14 @@ Shader "Hidden/ChromaticAbberation"
                     // Get the texture color at the current pixel
                 float4 col = tex2D(_MainTex, i.uv);
 
-                // Calculate the offset amounts for the red, green, and blue channels
                 float redOffset = _RedOffset * _Distance * i.uv.x;
                 float greenOffset = _GreenOffset * _Distance * i.uv.y;
                 float blueOffset = _BlueOffset * _Distance * (i.uv.x + i.uv.y);
 
-                // Apply the offset amounts to each channel of the texture color
                 float4 redColor = tex2D(_MainTex, i.uv + float2(redOffset, 0));
                 float4 greenColor = tex2D(_MainTex, i.uv + float2(0, greenOffset));
                 float4 blueColor = tex2D(_MainTex, i.uv + float2(blueOffset, blueOffset));
 
-                // Combine the offset colors with the original color using a weighted average
                 float4 finalColor = (redColor * 0.35) + (greenColor * 0.45) + (blueColor * 0.2);
 
                 return finalColor;

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
-public class MyBlitFeature : ScriptableRendererFeature
+public class VignetteFeature : ScriptableRendererFeature
 {
   [System.Serializable]
   public class MyFeatureSettings
@@ -16,11 +16,11 @@ public class MyBlitFeature : ScriptableRendererFeature
   public MyFeatureSettings settings = new MyFeatureSettings();
 
   RenderTargetHandle renderTextureHandle;
-  MyBlitRenderPass myRenderPass;
+  VignetteRenderPass vignetteRenderPass;
 
   public override void Create()
   {
-    myRenderPass = new MyBlitRenderPass(
+    vignetteRenderPass = new VignetteRenderPass(
       "My custom pass",
       settings.WhenToInsert,
       settings.MaterialToBlit
@@ -39,10 +39,10 @@ public class MyBlitFeature : ScriptableRendererFeature
     // Gather up and pass any extra information our pass will need.
     // In this case we're getting the camera's color buffer target
     var cameraColorTargetIdent = renderer.cameraColorTarget;
-    myRenderPass.Setup(cameraColorTargetIdent);
+    vignetteRenderPass.Setup(cameraColorTargetIdent);
 
     // Ask the renderer to add our pass.
     // Could queue up multiple passes and/or pick passes to use
-    renderer.EnqueuePass(myRenderPass);
+    renderer.EnqueuePass(vignetteRenderPass);
   }
 }
